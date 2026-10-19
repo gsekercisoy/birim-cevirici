@@ -1,0 +1,42 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { background: #0f172a; color: #e2e8f0; font-family: system-ui, sans-serif; min-height: 100vh; }
+
+.app { max-width: 560px; margin: 30px auto; padding: 0 16px; display: flex; flex-direction: column; gap: 14px; }
+h1 { text-align: center; }
+.lead { color: #94a3b8; font-size: .9rem; text-align: center; }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+.tabs button {
+  background: #1e293b; color: #94a3b8; border: 1px solid #334155;
+  padding: 8px 15px; border-radius: 999px; font-weight: 700; cursor: pointer; font-size: .85rem;
+}
+.tabs button.active { background: #22c55e; color: #052e16; border-color: transparent; }
+
+.panel { background: #1e293b; border: 1px solid #334155; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: end; }
+label { font-size: .76rem; color: #94a3b8; display: block; margin-bottom: 6px; }
+input, select {
+  width: 100%; background: #0f172a; border: 1px solid #334155; color: #e2e8f0;
+  padding: 11px 12px; border-radius: 9px; font-size: 1rem;
+}
+input:focus, select:focus { outline: 2px solid #22c55e; }
+
+.swap-row { display: flex; justify-content: center; }
+.swap {
+  background: #334155; color: #e2e8f0; border: none; border-radius: 50%;
+  width: 38px; height: 38px; font-size: 1rem; cursor: pointer;
+}
+.swap:hover { background: #475569; }
+
+.result { background: #14532d; border: 1px solid #166534; border-radius: 10px; padding: 14px; text-align: center; }
+.result b { font-size: 1.4rem; color: #4ade80; font-variant-numeric: tabular-nums; display: block; }
+.result span { color: #86efac; font-size: .78rem; }
+
+.units { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 6px; }
+.units div { background: #273449; border-radius: 8px; padding: 8px; font-size: .72rem; text-align: center; color: #94a3b8; }
+.units b { display: block; color: #e2e8f0; font-size: .8rem; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
+
+.muted { color: #64748b; }
+.err { background: #7f1d1d; color: #fecaca; padding: 10px 14px; border-radius: 10px; font-size: .85rem; }
+.big { text-align: center; margin-top: 40px; }
